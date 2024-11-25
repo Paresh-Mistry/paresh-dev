@@ -8,7 +8,7 @@ import Education from './Components/Education';
 
 function App() {
   return (
-    <Router>
+    <Router basename='/MyPortfolio'>
       <header>
         <Navbar />
       </header>
