@@ -6,6 +6,8 @@
   "homepage": "https://paresh-mistry.github.io/MyPortfolio",
   "scripts": {
     "dev": "vite",
+    "predeploy":"npm run build",
+    "deploy":"npm run deploy",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
