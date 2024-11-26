@@ -13,21 +13,21 @@ const projects = [
     description: 'A comprehensive platform for managing virtual events with features like ticket booking, live streaming, and real-time chat.',
     link: 'https://github.com/your-username/project-two',
     tech: 'Python, Flask, TailwindCSS, HTML , Booststrap ,CSS',
-    image: 'https://images.pexels.com/photos/3888151/pexels-photo-3888151.jpeg?auto=compress&cs=tinysrgb&w=400',
+    image: '',
   },
   {
     title: 'E-commerce Website',
     description: 'An e-commerce platform with features like product listings, shopping cart, and secure payment gateway integration.',
     link: '',
     tech: 'Python, Django, SQlite Database , HTML ,TailwindCSS , CSS',
-    image: 'https://images.pexels.com/photos/3888151/pexels-photo-3888151.jpeg?auto=compress&cs=tinysrgb&w=400',
+    image: '',
   },
   {
     title: 'Blog Platform',
     description: 'A blogging platform where users can create and manage blogs, comment on posts, and follow other users.',
     link: 'https://github.com/your-username/project-three',
     tech: 'Python, Django, SQlite Database , HTML ,TailwindCSS , CSS',
-    image: 'https://images.pexels.com/photos/3888151/pexels-photo-3888151.jpeg?auto=compress&cs=tinysrgb&w=400',
+    image: '',
   },
 ];
 
@@ -40,7 +40,7 @@ const Projects = () => {
         {projects.map((project, index) => (
           <div key={index} className="group relative rounded-lg border border-gray-200 shadow-lg hover:shadow-xl transition duration-300">
             <img
-              src={project.image}
+              src={project.image == '' ? 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7xeSWhzrwWx0oUytpl4O5E8o3zw4McnnzJg&s' : project.image}
               alt={project.title}
               className="w-full h-48 object-cover rounded-t-lg group-hover:opacity-80 transition duration-300"
             />

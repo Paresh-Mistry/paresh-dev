@@ -32,7 +32,7 @@ export const Navbar = () => {
                 </ul>
 
                 <a
-                    href="/Resume.pdf"
+                    href="/MyResume.pdf"
                     download="MyResume.pdf"
                     className="hidden md:inline-block bg-white text-indigo-600 px-5 py-2 rounded-full shadow-md hover:bg-yellow-400 hover:text-white transition duration-300"
                 >

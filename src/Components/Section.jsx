@@ -39,7 +39,7 @@ export const Section = () => {
                         extraordinary together!
                     </p>
                     <a
-                        href="/Resume.pdf"
+                        href="/MyResume.pdf"
                         download="MyResume.pdf"
                         className="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-full shadow-lg hover:bg-blue-700 transform hover:scale-105 transition-transform"
                     >
@@ -64,33 +64,43 @@ export const Section = () => {
                 <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-100 via-white to-blue-50 opacity-20 rounded-lg pointer-events-none"></div>
             </section>
 
-            <section className="py-20 bg-gradient-to-r from-blue-200 via-indigo-300 to-purple-400">
+            <section className="py-20 bg-gradient-to-br from-blue-200 via-indigo-300 to-purple-400">
                 <div className="container mx-auto px-6">
-                    <h2 className="text-center text-5xl font-bold text-gray-800 mb-16">
-                        My Software Tools
+                    <h2 className="text-center text-5xl font-extrabold text-gray-800 mb-16">
+                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500">
+                            My Software Tools
+                        </span>
                     </h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
-                            {softwaresUse.map((element) => (
-                                <a href={element["link"]}>
-                                    <div
-                                        key={element}
-                                        className="relative bg-white rounded-xl overflow-hidden shadow-xl transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:bg-gradient-to-r from-indigo-400 to-purple-500"
-                                    >
-                                        <img
-                                            src={element["image"]}
-                                            alt={element["title"]}
-                                            className="w-full h-72 object-cover transition-transform duration-500 ease-in-out hover:scale-110"
-                                        />
-                                        <div className="absolute inset-0 bg-black opacity-40 hover:opacity-0 transition-opacity duration-300"></div>
-                                        <div className="absolute bottom-6 left-6 text-white font-semibold text-2xl z-10 tracking-wide">
-                                            <h3>{element["title"]}</h3>
-                                        </div>
+                        {softwaresUse.map((element) => (
+                            <a
+                                href={element.link}
+                                key={element.title}
+                                className="group transform transition-transform duration-500 hover:scale-105"
+                            >
+                                <div className="relative bg-white rounded-2xl overflow-hidden shadow-xl transition-shadow duration-500 hover:shadow-2xl">
+                                    <img
+                                        src={element.image}
+                                        alt={element.title}
+                                        className="w-full h-72 object-cover transition-transform duration-700 group-hover:scale-110"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                    <div className="absolute bottom-6 left-6 text-white font-bold text-2xl z-10 tracking-wide drop-shadow-md">
+                                        <h3>{element.title}</h3>
                                     </div>
-                                </a>
-                            ))}
+                                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                        <p className="text-white bg-black/70 px-4 py-2 rounded-lg text-sm shadow-lg">
+                                            Click to Learn More
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        ))}
                     </div>
                 </div>
             </section>
+
+
 
 
         </>
