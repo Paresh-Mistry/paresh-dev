@@ -41,7 +41,7 @@ export const Section = () => {
                     <p className="text-gray-400 text-lg leading-relaxed mb-6">
                         Passionate about crafting elegant coding architectures and an avid
                         contributor to open-source projects. Let's build something
-                        extraordinary together!
+                        extraordinary together!!
                     </p>
                     <Link
                         variant="primary"
