@@ -3,10 +3,10 @@ import React from 'react';
 
 const Education = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
       <div className="container mx-auto py-12 px-6">
         <h1 className="text-4xl font-bold text-center mb-8">My Education Journey</h1>
-        
+        <div className="absolute -top-16 -left-16 w-96 h-96 bg-blue-600 rounded-full blur-3xl opacity-15"></div>
         {/* Education Section */}
         <div className="bg-white text-gray-900 rounded-lg shadow-lg p-6 mb-12">
           <h2 className="text-3xl font-semibold text-center mb-6">University</h2>

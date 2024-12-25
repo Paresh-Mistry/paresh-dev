@@ -5,6 +5,7 @@ import { Section } from './Components/Section';
 import Footer from './Components/Footer';
 import Projects from './Components/Projects';
 import Education from './Components/Education';
+import Resumepdf from './Components/Resumepdf';
 
 function App() {
   return (
@@ -14,9 +15,10 @@ function App() {
       </header>
       <main>
         <Routes>
-          <Route path="/" element={<Section />} />
+          <Route path={"paresh-dev"} element={<Section />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/education&skills" element={<Education />} />
+          <Route path="/Resume" element={<Resumepdf />} />
         </Routes>
       </main>
       <footer>
