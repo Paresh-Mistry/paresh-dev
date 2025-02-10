@@ -2,25 +2,23 @@ import React from "react";
 import { Link } from "react-router-dom";
 import pdf from '../assets/Resume.pdf'
 import image from '../assets/Profileimg.jpg'
+import { Github , CodepenIcon , Code2} from "lucide-react";
 
 export const Section = () => {
     const softwaresUse = [
         {
             title: "Visual Studio Code",
-            image:
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLiULeTGawBsUxJNhGZzLAV5LggV5QAr7fzQ&s",
+            image: <CodepenIcon size={300} className="mx-auto text-gray-500"/>,
             link: "https://code.visualstudio.com/",
         },
         {
             title: "Github Version Control",
-            image:
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0L-BfSvRBh70gABbYfuAn9OwLae2ccBLOTA&s",
+            image: <Github size={300} className="mx-auto text-gray-500"/>,
             link: "https://github.com",
         },
         {
             title: "Leetcode",
-            image:
-                "https://cdn.iconscout.com/icon/premium/png-256-thumb/leetcode-2824277-2359434.png",
+            image: <Code2 size={300} className="mx-auto text-gray-500"/>,
             link: "https://leetcode.com/",
         },
     ];
@@ -86,13 +84,11 @@ export const Section = () => {
                                 rel="noopener noreferrer"
                             >
                                 <div className="relative bg-gray-800 rounded-xl overflow-hidden shadow-lg transition-shadow duration-500 hover:shadow-2xl">
-                                    <img
-                                        src={element.image}
-                                        alt={element.title}
-                                        className="w-full h-72 object-cover transition-transform duration-700 group-hover:scale-110"
-                                    />
+                                    <span
+                                        className="text-center h-72 object-cover transition-transform duration-700 group-hover:scale-110"
+                                    >{element.image}</span>
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                    <div className="absolute bottom-6 left-6 text-white font-bold text-2xl z-10 tracking-wide drop-shadow-md">
+                                    <div className="absolute bottom-6 left-6 text-blue-500 font-bold text-2xl z-10 tracking-wide drop-shadow-md">
                                         <h3 className="group-hover:text-blue-400 transition-colors duration-300">
                                             {element.title}
                                         </h3>

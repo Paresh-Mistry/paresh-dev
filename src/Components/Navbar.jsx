@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import pdf from '../assets/Resume.pdf'
+import { Menu } from 'lucide-react';
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 shadow-lg">
+    <nav className="relative bg-gradient-to-br z-20 from-gray-900 via-gray-800 to-gray-900 shadow-lg">
       <div className="container mx-auto flex justify-between items-center px-6 py-4">
         <Link to="/paresh-dev" className="flex items-center space-x-3">
           <img
@@ -36,26 +37,13 @@ export const Navbar = () => {
           className="md:hidden text-white"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-8 w-8 transition"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d={isOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16m-7 6h7'}
-            />
-          </svg>
+          <Menu/>
         </button>
         
       </div>
 
-      {isOpen && (
-        <ul className="md:hidden bg-gray-800 text-gray-300 text-lg font-medium text-center space-y-4 py-4 rounded-lg shadow-lg">
+      
+        <ul className={`md:hidden absolute bg-gray-800 text-gray-300 text-lg font-medium text-center space-y-4 py-4 rounded-lg shadow-lg transform transition-all duration-300 ease-in-out w-full ${isOpen ? 'translate-y-0 opacity-100' : '-translate-y-6 opacity-0'}`}>
           {['Home', 'Projects', 'Education&Skills', 'Resume'].map((item) => (
             <li key={item}>
               <Link
@@ -79,7 +67,7 @@ export const Navbar = () => {
             </Link>
           </li>
         </ul>
-      )}
+      
     </nav>
   );
 };

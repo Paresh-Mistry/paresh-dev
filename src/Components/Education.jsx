@@ -12,7 +12,8 @@ const Education = () => {
           <h2 className="text-3xl font-semibold text-center mb-6">University</h2>
           <p className="text-xl text-center mb-4">Bachelor's in Electronics & Telecommunications Engineering</p>
           <p className="text-center text-lg text-gray-700">K.J. Somaiya College of Engineering</p>
-          <p className="text-center text-lg text-gray-700">{new Date().getFullYear()} - Present</p>
+          <p className="text-center text-lg text-gray-700">{new Date().getFullYear() > 2026 ? "Under Graduated" : new Date().getFullYear() + " - Present"}</p>
+          <p className="text-center text-lg text-gray-700">CGPA : 8.09</p>
         </div>
 
         {/* Course Section */}
@@ -23,8 +24,8 @@ const Education = () => {
             <li>Digital Circuits & Microprocessors</li>
             <li>Machine Learning</li>
             <li>Web Development</li>
+            <li>Operating System</li>
             <li>Computer Networks</li>
-            <li>Cloud Computing</li>
           </ul>
         </div>
 
@@ -32,23 +33,20 @@ const Education = () => {
         <div className="bg-white text-gray-900 rounded-lg shadow-lg p-6 mb-12">
           <h2 className="text-3xl font-semibold text-center mb-6">Skills Acquired</h2>
           <div className="flex flex-wrap justify-center gap-6">
-            <div className="bg-indigo-600 text-white px-4 py-2 rounded-full">JavaScript</div>
-            <div className="bg-indigo-600 text-white px-4 py-2 rounded-full">React</div>
-            <div className="bg-indigo-600 text-white px-4 py-2 rounded-full">Python</div>
-            <div className="bg-indigo-600 text-white px-4 py-2 rounded-full">Django</div>
-            <div className="bg-indigo-600 text-white px-4 py-2 rounded-full">HTML & CSS</div>
-            <div className="bg-indigo-600 text-white px-4 py-2 rounded-full">SQL</div>
+            {["JavaScript Frameworks", "HTML & CSS", "Embedded Programming", "Python Frameworks", "SQL/NoSQL Database"].map((languages) => (
+              <div className="bg-indigo-600 text-white px-4 py-2 rounded-full">{languages}</div>
+            ))}
           </div>
         </div>
-        
+
         {/* Certifications Section */}
         <div className="bg-white text-gray-900 rounded-lg shadow-lg p-6 mb-12">
           <h2 className="text-3xl font-semibold text-center mb-6">Certifications</h2>
           <ul className="list-disc pl-6 text-lg text-gray-700">
-            <li>Certified React Developer - Udemy</li>
-            <li>Data Structures & Algorithms - Coursera</li>
-            <li>Python for Data Science - edX</li>
-            <li>Cloud Computing Fundamentals - Udacity</li>
+            <li>Certified React Developer - Simplilearn</li>
+            <li>Java for Beginner - Coursera</li>
+            <li>Python - Spoken Tutorial</li>
+            <li>Cloud Computing Fundamentals - Simplilearn</li>
           </ul>
         </div>
 
