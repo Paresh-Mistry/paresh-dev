@@ -16,9 +16,9 @@ function App() {
       <main>
         <Routes>
           <Route path={"paresh-dev"} element={<Section />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/education&skills" element={<Education />} />
-          <Route path="/Resume" element={<Resumepdf />} />
+          <Route path="/paresh-dev/projects" element={<Projects />} />
+          <Route path="/paresh-dev/education&skills" element={<Education />} />
+          <Route path="/paresh-dev/Resume" element={<Resumepdf />} />
         </Routes>
       </main>
       <footer>

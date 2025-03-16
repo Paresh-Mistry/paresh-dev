@@ -24,7 +24,7 @@ export const Navbar = () => {
           {['Home', 'Projects', 'Education&Skills', 'Resume'].map((item) => (
             <li key={item}>
               <Link
-                to={item === "Home" ? '/paresh-dev' : '/' + item.toLowerCase()}
+                to={item === "Home" ? '/paresh-dev' : '/paresh-dev/' + item.toLowerCase()}
                 className="hover:text-blue-500 transition-colors duration-200"
               >
                 {item}
@@ -47,7 +47,7 @@ export const Navbar = () => {
           {['Home', 'Projects', 'Education&Skills', 'Resume'].map((item) => (
             <li key={item}>
               <Link
-                to={item === "Home" ? '/paresh-dev' : '/' + item.toLowerCase()}
+                to={item === "Home" ? '/paresh-dev' : '/paresh-dev/' + item.toLowerCase()}
                 className="hover:text-blue-500 transition-colors duration-200"
                 onClick={() => setIsOpen(false)}
               >

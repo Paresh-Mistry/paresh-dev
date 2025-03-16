@@ -32,9 +32,16 @@ const projects = [
   {
     title: 'News Application',
     description: 'A News platform using OMDB Api where users can latest News , topstories and Sports news by applying filters.',
-    link: 'Movies-Application',
+    link: 'React-News-App.git',
     tech: 'ReactJS , Restful API , TailwindCSS',
     image: 'https://images.pexels.com/photos/3408747/pexels-photo-3408747.jpeg?auto=compress&cs=tinysrgb&w=400',
+  },
+  {
+    title: 'Geo-Profile',
+    description: 'This project demonstrates how to use React.js in combination with Leaflet to display a map and track the users location in real-time.',
+    link: 'GeoProfiles.git',
+    tech: 'ReactJS , TailwindCSS , LeafletJS',
+    image: 'https://github.com/Paresh-Mistry/GeoProfiles/raw/main/src/assets/Images/Screenshot%20(25).png',
   }
 ];
 
