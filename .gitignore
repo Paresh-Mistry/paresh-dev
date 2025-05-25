@@ -24,4 +24,5 @@ dist-ssr
 *.sw?
 /assets
 *.jpg
-src/components/Education.jsx
+/src/components/Education.jsx
+/src/assets/
