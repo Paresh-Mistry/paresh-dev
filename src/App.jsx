@@ -6,6 +6,7 @@ import Footer from './Components/Footer';
 import Projects from './Components/Projects';
 import Education from './Components/Education';
 import Resumepdf from './Components/Resumepdf';
+import Certificate from './Components/Certificate';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
         <Routes>
           <Route path={"paresh-dev"} element={<Section />} />
           <Route path="/paresh-dev/projects" element={<Projects />} />
-          <Route path="/paresh-dev/education&skills" element={<Education />} />
+          <Route path="/paresh-dev/certificate" element={<Certificate />} />
           <Route path="/paresh-dev/Resume" element={<Resumepdf />} />
         </Routes>
       </main>

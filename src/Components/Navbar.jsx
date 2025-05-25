@@ -21,7 +21,7 @@ export const Navbar = () => {
         </Link>
 
         <ul className="hidden md:flex items-center space-x-8 text-gray-300 text-lg font-medium">
-          {['Home', 'Projects', 'Education&Skills', 'Resume'].map((item) => (
+          {['Home', 'Projects', 'Certificate' , 'Resume'].map((item) => (
             <li key={item}>
               <Link
                 to={item === "Home" ? '/paresh-dev' : '/paresh-dev/' + item.toLowerCase()}
@@ -38,13 +38,13 @@ export const Navbar = () => {
           onClick={() => setIsOpen(!isOpen)}
         >
           <Menu/>
-        </button>
+        </button> 
         
       </div>
 
       
-        <ul className={`md:hidden absolute bg-gray-800 text-gray-300 text-lg font-medium text-center space-y-4 py-4 rounded-lg shadow-lg transform transition-all duration-300 ease-in-out w-full ${isOpen ? 'translate-y-0 opacity-100' : '-translate-y-6 opacity-0'}`}>
-          {['Home', 'Projects', 'Education&Skills', 'Resume'].map((item) => (
+        <ul className={`md:hidden absolute bg-gray-800 text-gray-300 text-lg font-medium text-center space-y-4 py-4 rounded-lg shadow-lg transform transition-all duration-300 ease-in-out w-full ${isOpen ? 'translate-y-0 ' : '-translate-y-6 hidden'}`}>
+          {['Home', 'Projects', 'Certificate', 'Resume'].map((item) => (
             <li key={item}>
               <Link
                 to={item === "Home" ? '/paresh-dev' : '/paresh-dev/' + item.toLowerCase()}
