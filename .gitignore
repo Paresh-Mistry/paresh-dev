@@ -24,4 +24,5 @@ dist-ssr
 *.sw?
 /assets
 *.jpg
-*.pdf
+# Ignore all PDFs in src/assets
+/src/assets/*.pdf
