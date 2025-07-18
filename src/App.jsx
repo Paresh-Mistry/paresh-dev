@@ -1,12 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useState } from 'react';
 import { Navbar } from './Components/Navbar';
-import { Section } from './Components/Section';
 import Footer from './Components/Footer';
-import Projects from './Components/Projects';
-import Education from './Components/Education';
-import Resumepdf from './Components/Resumepdf';
-import Certificate from './Components/Certificate';
+import Projects from './routes/Projects';
+import Certificate from './routes/Certificate';
+import Education from './routes/Education';
+import {Home} from './routes/Home';
+
 
 function App() {
   return (
@@ -16,10 +15,10 @@ function App() {
       </header>
       <main>
         <Routes>
-          <Route path={"paresh-dev"} element={<Section />} />
+          <Route path={"paresh-dev"} element={<Home />} />
           <Route path="/paresh-dev/projects" element={<Projects />} />
           <Route path="/paresh-dev/certificate" element={<Certificate />} />
-          <Route path="/paresh-dev/Resume" element={<Resumepdf />} />
+          <Route path="/paresh-dev/education" element={<Education />} />
         </Routes>
       </main>
       <footer>

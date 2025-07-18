@@ -5,7 +5,11 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}", // For React or similar frameworks
   ],
   theme: {
-    extend: {},
+    extend: {
+       fontFamily: {
+        sans: ['Montserrat', 'ui-sans-serif', 'system-ui'],
+      },
+    },
   },
   plugins: [],
 };
