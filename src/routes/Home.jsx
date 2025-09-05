@@ -2,10 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import pdf from "../assets/Resume.pdf";
 import image from "../assets/Profileimg.jpg";
-import { Github, CodepenIcon, Code2 } from "lucide-react";
+import { Github, CodepenIcon, Code2, MessageCircleCode, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 
 export const Home = () => {
+
+  const MobNumber = import.meta.env.VITE_MOBILE_NUMBER
+  const MailId = import.meta.env.VITE_MAIL_ID
+
   const softwaresUse = [
     {
       title: "Visual Studio Code",
@@ -50,14 +54,27 @@ export const Home = () => {
             contributor to open-source projects. Let's build something
             extraordinary together!!
           </p>
-          <Link
-            className="inline-block px-6 py-3 bg-gradient-to-br from-blue-500 to-purple-600 text-white font-semibold rounded-full shadow-lg hover:shadow-2xl hover:scale-110 transform transition-transform"
-            to={pdf}
-            target="_blank"
-            style={{ maxWidth: "250px" }}
-          >
-            &nbsp;Download Resume
-          </Link>
+          <div className="flex items-center gap-3 md:justify-normal justify-center">
+            <div>
+              <Link
+                className="inline-block px-6 py-3 bg-gradient-to-br from-blue-500 to-purple-600 text-white font-semibold rounded-full shadow-lg hover:shadow-2xl hover:scale-110 transform transition-transform"
+                to={pdf}
+                target="_blank"
+                style={{ maxWidth: "250px" }}
+              >
+                &nbsp;Download Resume
+              </Link>
+            </div>
+            <div className="flex gap-1.5">
+              <Link to={`https://wa.me/${MobNumber}`} className="bg-gradient-to-br from-green-800 to-green-500 p-3 rounded-full hover:scale-110">
+                <MessageCircleCode color="#ffffff" />
+              </Link>
+              <Link to={`mailto:${MailId}`} className="bg-gradient-to-br from-red-800 to-red-500 p-3 rounded-full hover:scale-110">
+                <Mail color="#ffffff" />
+              </Link>
+            </div>
+          </div>
+
         </motion.div>
 
         {/* Animated Right Image */}

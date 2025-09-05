@@ -1,7 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Folder } from 'lucide-react';
 
 import Eurogrip from '../assets/Eurogrip_Torq.pdf';
 import Invictus from '../assets/invictus.pdf';
@@ -9,7 +7,6 @@ import Code_w from '../assets/Code_Warrior.pdf';
 import Flipkart from '../assets/flipkart_grid.pdf';
 import Ai_agent from '../assets/Ai_agent.pdf';
 import Reactjs from '../assets/React.pdf';
-import Python from '../assets/Python.pdf';
 import Java from '../assets/Java.pdf';
 import Claidroid from '../assets/Claidroid.jpg';
 import Layoutwrap from '../Layout/Layoutwrap';
@@ -80,12 +77,15 @@ const Certificate = () => {
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={sectionVariants}>
           <div className="mb-6">
             <h1 className="font-bold text-[40px] md:text-[70px] text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">{"hackathons".toUpperCase()}</h1>
+            <div className='text-white text-xs bg-gray-700 w-fit px-1.5 py-1 rounded mb-3'>
+              Total Certificates- {cert_.length + course.length + internship.length}
+            </div>
 
             <p className="text-sm text-gray-300 mt-1"># Participated in competitive hackathons, showcasing problem-solving and teamwork.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {cert_.map((item, i) => (
-              <CFile item={item} />
+              <CFile key={i} item={item} />
             ))}
           </div>
         </motion.div>
@@ -100,7 +100,7 @@ const Certificate = () => {
           <div className="md:flex md:justify-end w-full">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
               {course.map((item, i) => (
-                <CFile item={item} />
+                <CFile key={i} item={item} />
               ))}
             </div>
           </div>
@@ -117,7 +117,7 @@ const Certificate = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {internship.map((item, i) => (
-              <CFile item={item} />
+              <CFile key={i} item={item} />
             ))}
           </div>
         </motion.div>

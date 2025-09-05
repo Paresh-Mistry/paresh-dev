@@ -29,20 +29,13 @@ const Education = () => {
     "Computer Networks",
   ];
 
-  const certifications = [
-    "Certified React Developer - Simplilearn",
-    "Java for Beginner - Coursera",
-    "Python - Spoken Tutorial",
-    "Cloud Computing Fundamentals - Simplilearn",
-  ];
-
   return (
 
     <Layoutwrap>
 
-      <div className="relative min-h-screen">
+      {/* <div className="relative"> */}
 
-        <div className="px-6 mx-auto z-10 relative">
+        <div className="md:px-6 mx-auto z-10 relative">
 
           <motion.h1
             className="flex items-center gap-3 font-bold text-white mb-8 tracking-wide"
@@ -63,37 +56,31 @@ const Education = () => {
             <p className="text-center text-blue-300 font-medium">CGPA: 8.29</p>
           </Card>
 
-          <Card>
-            <SectionTitle icon={<Settings className="w-6 h-6 mr-2" />} title="Skills Acquired" />
-            <div className="flex flex-wrap justify-center gap-4 mt-4">
-              {skills.map((skill, i) => (
-                <span key={i} className="bg-indigo-600 hover:bg-indigo-700 transition-all px-4 py-2 rounded-full shadow text-white text-sm font-semibold">
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </Card>
+          <div className='grid md:grid-cols-2 gap-3'>
+            <Card>
+              <SectionTitle icon={<Settings className="w-6 h-6 mr-2" />} title="Skills Acquired" />
+              <div className="flex flex-col justify-center gap-4 mt-4">
+                {skills.map((skill, i) => (
+                  <span key={i} className="bg-indigo-600 hover:bg-indigo-700 transition-all px-4 py-2 rounded-full shadow text-white text-sm font-semibold">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </Card>
 
-          <Card>
-            <SectionTitle icon={<BookOpenText className="w-6 h-6 mr-2" />} title="Relevant Courses" />
-            <ul className="list-disc list-inside text-gray-300 space-y-2">
-              {courses.map((course, i) => (
-                <li key={i}>{course}</li>
-              ))}
-            </ul>
-          </Card>
+            <Card>
+              <SectionTitle icon={<BookOpenText className="w-6 h-6 mr-2" />} title="Relevant Courses" />
+              <ul className="list-inside list-decimal text-gray-300 space-y-2">
+                {courses.map((course, i) => (
+                  <li key={i}>{course}</li>
+                ))}
+              </ul>
+            </Card>
+          </div>
 
-          <Card>
-            <SectionTitle icon={<BadgeCheck className="w-6 h-6 mr-2" />} title="Certifications" />
-            <ul className="list-disc list-inside text-gray-300 space-y-2">
-              {certifications.map((cert, i) => (
-                <li key={i}>{cert}</li>
-              ))}
-            </ul>
-          </Card>
         </div>
 
-      </div>
+      {/* </div> */}
 
     </Layoutwrap>
 
@@ -106,7 +93,7 @@ const Card = ({ children }) => (
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.6, ease: 'easeOut' }}
     viewport={{ once: true }}
-    className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl shadow-lg p-6 md:p-8 mb-12 hover:shadow-2xl transition-all duration-300"
+    className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl shadow-lg p-6 md:p-8 mb-8 hover:shadow-2xl transition-all duration-300"
   >
     {children}
   </motion.div>

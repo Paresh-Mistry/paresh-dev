@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import pdf from '../assets/Resume.pdf'
-import { Menu } from 'lucide-react';
+import { Menu, MenuSquare } from 'lucide-react';
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,7 +34,7 @@ export const Navbar = () => {
           className="md:hidden text-white focus:outline-none hover:text-blue-500 transition"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <Menu className="w-7 h-7" />
+          <MenuSquare className="w-7 h-7" />
         </button>
       </div>
 
